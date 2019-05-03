@@ -171,6 +171,13 @@ img {
 nav {
   display: flex;
   margin: 0px;
+  padding-right: 100px;
+}
+@media (max-width:500px) {
+  nav {
+    justify-content: space-evenly;
+    padding-right: 0px;
+  }
 }
 nav a {
   text-decoration: none;
@@ -209,13 +216,17 @@ nav a {
   width: 48%;
   padding-left: 1%;
 }
+@media (max-width:500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
+}
 .home .content-section .img-content img {
   border-radius: 10px;
 }
 @media (max-width:500px) {
-  .home .content-section .img-content {
+  .home .content-section .img-content img {
     width: 100%;
-    margin: auto;
   }
 }
 .home .inverse-content {
@@ -234,13 +245,13 @@ nav a {
   width: 75%;
   margin: 0 auto 30px;
 }
-.home .content-destination img {
-  border-radius: 10px;
-}
 @media (max-width:500px) {
   .home .content-destination {
     width: 100%;
   }
+}
+.home .content-destination img {
+  border-radius: 10px;
 }
 .home .content-pick {
   padding-top: 30px;
@@ -248,31 +259,53 @@ nav a {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width:500px) {
+  .home .content-pick {
+    flex-direction: column;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
 }
 @media (max-width:500px) {
-  .home .content-pick {
-    flex-direction: column;
-  }
   .home .content-pick .destination {
     width: 90%;
+    margin: 15px auto;
+    padding-top: 20px;
   }
 }
-header {
+.top-nav {
   display: flex;
   justify-content: space-between;
   margin: auto;
-  width: 800px;
   border-bottom: 2px dashed #C0C0C0;
 }
-.logo {
+@media (max-width:500px) {
+  .top-nav {
+    flex-direction: column;
+    width: auto;
+  }
+}
+.top-nav .logo {
   font-size: 4rem;
   font-family: 'Indie Flower', cursive;
+  padding-left: 100px;
+}
+@media (max-width:500px) {
+  .top-nav .logo {
+    text-align: center;
+    padding-left: 0px;
+  }
+}
+.banner {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 .btn {
-  font-size: 1em;
+  font-size: 2em;
   width: 175px;
   padding: 10px 10px;
   border-radius: 10px;
