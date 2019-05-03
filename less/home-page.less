@@ -13,17 +13,26 @@
         width:100%;
         order:-1;
       }
+      @media @tablet{
+        width:75%;
+        order:-1;
+        margin: auto;
+      }
     }   
 
     .img-content {
       width: 48%;
       padding-left: 1%; 
-       @media @mobile{
-         width:100%;
+      @media @mobile{
+        width:100%;
+      }
+      @media @tablet{
+        width:75%;
+        margin:auto;
       }
       img {
         border-radius: 10px;
-        @media @mobile{
+        @media @tablet{
           width:100%;
         }
       }
@@ -63,14 +72,14 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-    @media @mobile{
+    @media @tablet{
       flex-direction: column;
     }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
-      @media @mobile{
+      @media @tablet{
         width: 90%;
         margin:15px auto;
         padding-top: 20px;
@@ -86,17 +95,22 @@
   margin: auto;
   // width: 800px;
   border-bottom: 2px dashed @navigation-border;
-  @media @mobile{
-    flex-direction: column;
+  @media @tablet{
     width: auto;
+  }
+  @media @mobile{
+    flex-direction:column;
+    width:auto;
   }
   .logo{
     font-size: 4rem;
     font-family: 'Indie Flower', cursive;
     padding-left: 100px;
-    @media @mobile{
-      text-align: center;
+    @media @tablet{
       padding-left:0px;
+    }
+    @media @mobile{
+      text-align:center;
     }
   }
 }
@@ -109,4 +123,12 @@
 
 .btn{
   .btn-mixin(@button-bg, @white );
+  @media @tablet{
+    .btn-mixin(@button-bg, @white, 75vw);
+    margin:auto;
+  }
+  @media @mobile{
+    .btn-mixin(@button-bg, @white, 90vw);
+    margin:auto;
+  }
 }

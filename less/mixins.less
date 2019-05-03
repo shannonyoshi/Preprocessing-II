@@ -1,7 +1,7 @@
 // Mixins in here
-.btn-mixin (@btn-bg-color,@btn-txt-color){
+.btn-mixin (@btn-bg-color,@btn-txt-color, @btn-width:175px){
   font-size: 2em;
-  width: 175px;
+  width: @btn-width;
   padding: 10px 10px;
   border-radius: 10px;
   background-color:@btn-bg-color;
